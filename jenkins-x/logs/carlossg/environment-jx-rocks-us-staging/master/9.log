@@ -1,0 +1,117 @@
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-p5n8m[0m
+{"level":"warn","ts":1580596589.5418494,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580596589.5423346,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-nxvk7[0m
+{"level":"warn","ts":1580596590.0477233,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1580596590.0731285,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-carlossg-environment-jx-ro-76j52[0m
+{"level":"warn","ts":1580596608.2594924,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580596608.5680199,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-**-rocks-us-staging.git @ 18f8bfba2916eeae302cd9a05173b4c7f20670a5 in path /workspace/source"}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:18f8bfba2916eeae302cd9a05173b4c7f20670a5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.9 and written to file: ./VERSION
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/********/environment-**-rocks-us-staging.git
+ ! [remote rejected] v0.0.9 -> v0.0.9 (cannot lock ref 'refs/tags/v0.0.9': reference already exists)
+error: failed to push some refs to 'https://github.com/********/environment-**-rocks-us-staging.git': failed to run 'git push origin v0.0.9' command in directory '', output: 'To https://github.com/********/environment-**-rocks-us-staging.git
+ ! [remote rejected] v0.0.9 -> v0.0.9 (cannot lock ref 'refs/tags/v0.0.9': reference already exists)
+error: failed to push some refs to 'https://github.com/********/environment-**-rocks-us-staging.git''
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step next-version --use-git-tag-only --tag' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-p5n8m[0m
+{"level":"warn","ts":1580596589.5418494,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580596589.5423346,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-nxvk7[0m
+{"level":"warn","ts":1580596590.0477233,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1580596590.0731285,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-carlossg-environment-jx-ro-76j52[0m
+{"level":"warn","ts":1580596608.2594924,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580596608.5680199,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-**-rocks-us-staging.git @ 18f8bfba2916eeae302cd9a05173b4c7f20670a5 in path /workspace/source"}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:18f8bfba2916eeae302cd9a05173b4c7f20670a5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.9 and written to file: ./VERSION
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/********/environment-**-rocks-us-staging.git
+ ! [remote rejected] v0.0.9 -> v0.0.9 (cannot lock ref 'refs/tags/v0.0.9': reference already exists)
+error: failed to push some refs to 'https://github.com/********/environment-**-rocks-us-staging.git': failed to run 'git push origin v0.0.9' command in directory '', output: 'To https://github.com/********/environment-**-rocks-us-staging.git
+ ! [remote rejected] v0.0.9 -> v0.0.9 (cannot lock ref 'refs/tags/v0.0.9': reference already exists)
+error: failed to push some refs to 'https://github.com/********/environment-**-rocks-us-staging.git''
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step next-version --use-git-tag-only --tag' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-p5n8m[0m
+{"level":"warn","ts":1580596589.5418494,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580596589.5423346,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-nxvk7[0m
+{"level":"warn","ts":1580596590.0477233,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1580596590.0731285,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-carlossg-environment-jx-ro-76j52[0m
+{"level":"warn","ts":1580596608.2594924,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1580596608.5680199,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-**-rocks-us-staging.git @ 18f8bfba2916eeae302cd9a05173b4c7f20670a5 in path /workspace/source"}
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:18f8bfba2916eeae302cd9a05173b4c7f20670a5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mmeta-carlossg-environment-jx-ro-9j96d-9[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.9 and written to file: ./VERSION
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/********/environment-**-rocks-us-staging.git
+ ! [remote rejected] v0.0.9 -> v0.0.9 (cannot lock ref 'refs/tags/v0.0.9': reference already exists)
+error: failed to push some refs to 'https://github.com/********/environment-**-rocks-us-staging.git': failed to run 'git push origin v0.0.9' command in directory '', output: 'To https://github.com/********/environment-**-rocks-us-staging.git
+ ! [remote rejected] v0.0.9 -> v0.0.9 (cannot lock ref 'refs/tags/v0.0.9': reference already exists)
+error: failed to push some refs to 'https://github.com/********/environment-**-rocks-us-staging.git''
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step next-version --use-git-tag-only --tag' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
